@@ -11,13 +11,18 @@ export default function App() {
 
 function Counter() {
   const [count, setCount] = useState(0);
+  const date = new Date("December 18 2023");
+  date.setDate(date.getDate() + count);
+
+
   return (
     <div>
-      <div>
+      {/* <div> */}
         <button onClick={() => setCount((c) => c - 1)}>-</button>
         <span>Count: {count}</span>
         <button onClick={() => setCount((c) => c + 1)}>+</button>
-      </div>
+      {/* </div> */}
+      <p> {date.toDateString()} </p>
     </div>
   );
 }
