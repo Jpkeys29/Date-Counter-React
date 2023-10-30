@@ -3,8 +3,8 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <div>
-      <h1>Counter or Testing</h1>
+    <div className="App">
+      <Counter />
     </div>
   );
 }
@@ -13,7 +13,7 @@ function Counter() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      Testing
+      <span>Count: {count}</span>
     </div>
   )
 }
