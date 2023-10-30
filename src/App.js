@@ -13,7 +13,11 @@ function Counter() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <span>Count: {count}</span>
+      <div>
+        <button onClick={() => setCount((c) => c - 1)}>-</button>
+        <span>Count: {count}</span>
+        <button onClick={() => setCount((c) => c + 1)}>+</button>
+      </div>
     </div>
-  )
+  );
 }
